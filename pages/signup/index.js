@@ -27,11 +27,6 @@ const Signup = () => {
                 ...status,
                 ...errorStatus
             }))
-            if (res.data.status === 201){
-                setTimeout(() =>{
-                    Router.push('/auto-tasks')
-                }, 3000)
-            }
             if (res.data.status !== 201){
                 setTimeout(() =>{
                     setStatus(status =>({
