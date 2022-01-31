@@ -27,19 +27,17 @@ const Signup = () => {
                 ...status,
                 ...errorStatus
             }))
-            if (res.data.status !== 201){
-                setTimeout(() =>{
-                    setStatus(status =>({
-                        ...status,
-                        ...{
-                            text: '',
-                            status: 200,
-                        }
-                    }))
-                },10000)
-            }
-        }).catch(error=>{
 
+        }).then(res=>{
+            setTimeout(() =>{
+                setStatus(status =>({
+                    ...status,
+                    ...{
+                        text: '',
+                        status: 200,
+                    }
+                }))
+            },10000)
         })
 
     }
