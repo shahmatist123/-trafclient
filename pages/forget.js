@@ -56,7 +56,7 @@ const Forget = () => {
                     </div>
 
                 </div>
-                <input onChange={changeHandler} className='auth-text' name='email' type="password" placeholder='Эл. почта'/>
+                <input onChange={changeHandler} className='auth-text' name='email' type="text" placeholder='Эл. почта'/>
 
                 <div className="auth-submit-wrapper link-purple">
                     <div onClick={forgerHandler} className="auth-submit">Отправить</div>
