@@ -98,7 +98,7 @@ const Token = () => {
                     </div>
 
                 </div>
-                <input onChange={changeHandler} className='auth-text' name='password' type="text" placeholder='Новый пароль'/>
+                <input onChange={changeHandler} className='auth-text' name='password' type="password" placeholder='Новый пароль'/>
 
                 <div className="auth-submit-wrapper link-purple">
                     <div onClick={forgerHandler} className="auth-submit">Отправить</div>
