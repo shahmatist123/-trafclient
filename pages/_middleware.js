@@ -1,4 +1,4 @@
-import  { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 export async function middleware(req, ev) {
     const response = NextResponse.next();
     const { cookies } = req
@@ -24,10 +24,7 @@ export async function middleware(req, ev) {
             nowValidUrl = true
         }
         if (!nowValidUrl){
-            // return NextResponse.redirect('')
-            return NextResponse.redirect(
-                `https://${req.nextUrl.hostname}${req.nextUrl.pathname}`,
-                301)
+            return NextResponse.redirect('/signup')
         }
     }
     else{
@@ -46,10 +43,7 @@ export async function middleware(req, ev) {
         }
 
         if (!nowValidUrl){
-            // return NextResponse.redirect('/auto-tasks')
-            return NextResponse.redirect(
-                `https://${req.nextUrl.hostname}${req.nextUrl.pathname}`,
-                301)
+            return NextResponse.redirect('/auto-tasks')
         }
     }
 
