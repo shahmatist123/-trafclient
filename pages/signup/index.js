@@ -45,9 +45,7 @@ const Signup = () => {
     }
     return (
         <div className='auth-wrapper'>
-            {status.text.length !== 0 &&
-            <AuthError res={status}/>
-            }
+            <AuthError res={status} style={{ }}/>
             <Link href='/'><img className='auth-logo' src={logo.src} alt=""/></Link>
 
             <div className='auth'>

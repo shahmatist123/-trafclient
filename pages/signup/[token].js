@@ -61,9 +61,7 @@ const Token = () => {
 
     return (
         <div className='auth-wrapper'>
-            {status.text.length !== 0 &&
-            <AuthError res={status}/>
-            }
+            <AuthError res={status} style={{ }}/>
 
         </div>
     )
